@@ -1,0 +1,301 @@
+{
+    "name": "UNICEF REPORT 2018",
+    "children": [{
+            "name": "Goal 1: Every Child Survives and Thrives",
+            "children": [{
+                    "name": "Health",
+                    "children": [
+                        { "name": "Support to 23 countries with high maternal and neonatal mortality", "size": 3940 },
+                        { "name": "Improve WASH services in 3355 health facilities", "size": 3800 },
+                        { "name": "Vaccination of 8.5M women", "size": 3800 },
+                        {
+                            "name": "Malaria",
+                            "children": [{
+                                "name": "Distributed insecticide-treated nets",
+                                "children": [
+                                    { "name": "28.3M people in 17 countries", "size": 3000 },
+                                    { "name": "1.5M in humanitarian situations in 11 countries", "size": 3800 }
+                                ]
+                            }]
+                        }
+                    ]
+                },
+                {
+                    "name": "Immunization",
+                    "children": [
+                        { "name": "Approx 65.5M children vaccinated with DTP", "size": 3000 },
+                        {
+                            "name": "Polio",
+                            "children": [
+                                { "name": "Transmission continues in Afghanistan and Pakistan ", "size": 2500 },
+                                { "name": "€11.6M from Germany", "size": 2500 },
+                                { "name": "UNICEF and CDC signed a 5-year, $180M agreement", "size": 2500 },
+                                { "name": "33 known cases (down from 350,000 in 1988) of paralysis from wild polo virus", "size": 2500 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Nutrition",
+                    "children": [
+                        { "name": "3.4M children suffering from malnurition treated", "size": 3800 },
+                        { "name": "255M children received vitamin A supplement", "size": 3800 },
+                        { "name": "15.6M children provided with micronutrient powders", "size": 3800 },
+                        { "name": "23M caregivers on optimal infant feeding practices", "size": 3800 },
+                        { "name": "£78M provided by the UK to tackle malnurition in Yemen", "size": 3800 }
+                    ]
+                },
+                {
+                    "name": "HIV and AIDS",
+                    "children": [
+                        { "name": "1.1M pregnant women with HIV recieved lifelong treatment", "size": 3800 },
+                        { "name": "HIV treatment rates for children rose to 52% globally ", "size": 3800 }
+                    ]
+                },
+                {
+                    "name": "Early Childhood Development",
+                    "children": [
+                        { "name": "80 countries have instituionalized ECD delivery services", "size": 7074 }
+                    ]
+                },
+                {
+                    "name": "Humanitarian Settings",
+                    "children": [
+                        { "name": "UNICEF responded to 87 health emergencies or outbreaks", "size": 3800 },
+                        { "name": "19.6M children received measles vaccination", "size": 3800 }
+                    ]
+                }
+
+            ]
+        },
+        {
+            "name": "Goal 2: Every Child Learns",
+            "children": [{
+                    "name": "Learning Outcomes",
+                    "children": [{
+                        "name": "35% of UNICEF supported countries had improved learning outcomes",
+                        "children": [
+                            { "name": "66% had adequate early learning policies, leadership and budget", "size": 2500 },
+                            { "name": "45% had governance and regulatory systems", "size": 2500 },
+                            { "name": "52% had learning learning opportunities with trained teachers", "size": 2500 }
+                        ]
+                    }]
+                },
+                {
+                    "name": "Equitable Access to Education",
+                    "children": [
+                        { "name": "11.9M out-of-school children participated in early education", "size": 3800 },
+                        {
+                            "name": "UNICEF supported countries",
+                            "children": [
+                                { "name": "37% had a strategy for making more equal access to education ", "size": 2500 },
+                                { "name": "35% had plans to address unequal educational resource allocation", "size": 2500 },
+                                { "name": "90% had a law establishing the right of all children to receive education", "size": 3000 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Skills Development",
+                    "children": [
+                        { "name": "Skills development for young people in 97 countries", "size": 3800 },
+                        { "name": "Life skills and employability being bolstered in Middle Eastern countries", "size": 3800 }
+                    ]
+                },
+                {
+                    "name": "Education in Emergencies",
+                    "children": [
+                        { "name": "6.9M children in humanitarian situations reached with education", "size": 3800 },
+                        {
+                            "name": "Development of a holistic learning assessment tool supported ",
+                            "size": 3800
+                        },
+                        { "name": "UNICEF hosted the fund’s secretariat and helped direct additional resources to underfunded education-in-emergency efforts", "size": 3800 }
+
+                    ]
+                },
+                {
+                    "name": "Global Commitment",
+                    "children": [
+                        { "name": "More than $2B raised to help provide quality learning to the poorest children", "size": 3800 },
+                        { "name": "World leaders pledged their support for the International Finance Facility for Education", "size": 3800 }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Goal 3: Child Protection",
+            "children": [{
+                    "name": "Protection from Exploitation",
+                    "children": [
+                        { "name": "2.3M children in 112 countries who had experienced violence supported", "size": 3800 },
+                        { "name": "Services that prevent and respond to child violence strengthened", "size": 3800 }
+                    ]
+                },
+                {
+                    "name": "Humanitarian Action",
+                    "children": [
+                        { "name": "3.6M children in 59 countries affected by conflict supported", "size": 3800 },
+                        { "name": "Gender-based violence in emergencies received renewed attention", "size": 3800 },
+                        { "name": "13,600 former child soldiers were reintegrated with their families", "size": 3800 },
+                        { "name": "More than 13,000 grave violations of children's rights were documented", "size": 3800 }
+
+                    ]
+                },
+                {
+                    "name": "Child Marriage",
+                    "children": [
+                        { "name": "4.8M adolescent girls were exposed to programmes aimed to prevent child marriage", "size": 3800 }
+                    ]
+                },
+                {
+                    "name": "Justice Issues",
+                    "children": [
+                        { "name": "Improve access to justice benefited 190,000 children and young people", "size": 3800 },
+                        {
+                            "name": "UNICEF supported capacity-building for justice professionals",
+                            "children": [
+                                { "name": "44% received certification to work with child offenders", "size": 2500 },
+                                { "name": "59% were certified to work with child victims", "size": 2500 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Strengthening Systems",
+                    "children": [
+                        { "name": "Worked with 132 countries to strengthen their social service workforce", "size": 3800 },
+                        { "name": "Helped 115 countries improve the availability and quality of data on child violence", "size": 3800 }
+                    ]
+                },
+                {
+                    "name": "Global Commitment",
+                    "children": [
+                        { "name": "Worked with Sweden on the 2030 Agenda for Children: End Violence Solutions Summit", "size": 3800 }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Goal 4: Safe and Clean Living Environment",
+            "children": [{
+                    "name": "Water",
+                    "children": [
+                        { "name": "18.6M people with access to safe drinking water", "size": 3800 }
+
+                    ]
+                },
+                {
+                    "name": "Sanitation and Hygiene",
+                    "children": [
+                        { "name": "10.8M people with access to basic sanitation services", "size": 3800 },
+                        { "name": "7710 schools gained access to gender-segregated sanitation facilities", "size": 3800 }
+                    ]
+                },
+                {
+                    "name": "Peacebuilding",
+                    "children": [
+                        { "name": "UNICEF worked with other UN agencies in 22 countries through the Peacebuilding Fund", "size": 3800 }
+                    ]
+                },
+                {
+                    "name": "Urban Programming",
+                    "children": [
+                        { "name": "Provided support to urban and rural local governments", "size": 3800 },
+                        { "name": "409 local governments in 32 countries have child-responsive and budgeted plans", "size": 3800 }
+                    ]
+                },
+                {
+                    "name": "Climate Change",
+                    "children": [
+                        { "name": "51 countries with environmental sustainability activities", "size": 3800 },
+                        { "name": "28 countries have programs that include children efforts to foster climate resilience", "size": 3800 },
+                        { "name": "Development of modules on environmental protection and climate change", "size": 3800 }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Goal 5: Equitable Chance of Life for Every Child",
+            "children": [{
+                    "name": "Social Protection",
+                    "children": [
+                        { "name": "Governments are encouraged to monitor child poverty ", "size": 3800 },
+                        { "name": "Governments are encouraged to enact social and economic policies ", "size": 3800 },
+                        { "name": "74 countries had mechanisms to measure and report on monetary child poverty", "size": 3800 },
+                        { "name": "75 countries have strong social protection systems", "size": 3800 }
+                    ]
+                },
+                {
+                    "name": "Adolescent Development",
+                    "children": [
+                        { "name": "33 countries have policies in place to support adolescent development", "size": 3800 },
+                        { "name": "4.2M adolescents were engaged in efforts to increase civic engagement", "size": 3800 }
+                    ]
+                },
+                {
+                    "name": "Gender Equality",
+                    "children": [
+                        { "name": "Providing support to 36 countries so they could implement positive gender socialization programmes", "size": 3800 }
+                    ]
+                },
+                {
+                    "name": "Children with Disabilities",
+                    "children": [
+                        { "name": "Supporting children with disabilities in 123 countries", "size": 3800 }
+                    ]
+                }
+
+            ]
+        },
+
+        {
+            "name": "General Statistics",
+            "children": [{
+                    "name": "Total Expenses",
+                    "children": [{
+                        "name": "About $5.4B spent",
+                        "children": [
+                            { "name": "Goal Area 1: $2.1B", "size": 4500 },
+                            { "name": "Goal Area 2: $1.2B", "size": 4000 },
+                            { "name": "Goal Area 3: $658M", "size": 3000 },
+                            { "name": "Goal Area 4: $1B", "size": 4000 },
+                            { "name": "Goal Area 5: $427M", "size": 3000 }
+                        ]
+                    }]
+                },
+
+                {
+                    "name": "Total revenue by source and funding type",
+                    "children": [{
+                        "name": "About $6.7B recieved",
+                        "children": [{
+                                "name": "Governments and Intergovernmental agencies",
+                                "children": [
+                                    { "name": "Regular resources: $894M (13%)", "size": 3800 },
+                                    { "name": "Other resources: $3,509M (53%)", "size": 4000 }
+                                ]
+                            }, {
+                                "name": "Private sector and non-governmental organizations",
+                                "children": [{
+                                        "name": "Regular resources: $739M (11%)",
+                                        "size": 3800
+                                    },
+                                    { "name": "Other resources: $722M (11%)", "size": 3800 }
+                                ]
+                            },
+
+                            {
+                                "name": "Inter-organizational arrangements",
+                                "children": [
+                                    { "name": "Other resources: $638M (10%)", "size": 3800 }
+                                ]
+                            },
+                            { "name": "Other revenue: $173M (3%)", "size": 2000 }
+                        ]
+                    }]
+                }
+            ]
+        }
+    ]
+}
