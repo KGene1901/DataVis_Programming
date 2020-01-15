@@ -10,7 +10,7 @@
         }
         
         .node:hover {
-            stroke: #000;
+            stroke: rgb(221, 25, 25);
             stroke-width: 1.5px;
         }
         
@@ -30,10 +30,20 @@
         .node--leaf {
             pointer-events: none;
         }
+
+        h1.title {
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            text-decoration: underline;
+            text-shadow: 2px 2px #add8e6;
+        }
     </style>
+    <h1 class="title" ><a href="https://www.unicef.org/media/55486/file/UNICEF-annual-report-2018%20revised%201.pdf">UNICEF Report 2018</a></h1>
     <svg width="1500" height="1500" version='1.1' xmlns="http://www.w3.org/2000/svg"></svg>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script type="text/javascript" src="zoom_circle.js" charset="utf-8"></script>
+    <script> const DataVis = new ZoomableCircle('https://raw.githubusercontent.com/KGene1901/DataVis_Programming/master/unicef_data.json', 5, 1500, ['hsl(200,100%,90%)', 'hsl(700,50%,70%)']); </script>
+    <p>Source: <a href="https://gist.github.com/mbostock/7607535">https://gist.github.com/mbostock/7607535</a></p>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 </body>
 
 </html>
