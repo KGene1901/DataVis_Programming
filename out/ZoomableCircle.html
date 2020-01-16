@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>ZoomableCircle<span class="signature">(dat, mar, diam, cR)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>ZoomableCircle<span class="signature">(url, mar, diam, cR)</span><span class="type-signature"></span></h2>
         
             <div class="class-description">Creates a data visualization based on circle packing with a zoomable function for user interactivity</div>
         
@@ -45,7 +45,7 @@
     
 
     
-    <h4 class="name" id="ZoomableCircle"><span class="type-signature"></span>new ZoomableCircle<span class="signature">(dat, mar, diam, cR)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="ZoomableCircle"><span class="type-signature"></span>new ZoomableCircle<span class="signature">(url, mar, diam, cR)</span><span class="type-signature"></span></h4>
     
 
     
@@ -53,7 +53,7 @@
 
 
 <div class="description">
-    Sets inputs for the styling and formatting of the visualization. It also parses data from the given input
+    Sets inputs for the styling and formatting of the visualization.<br>It also parses data from the given input.
 </div>
 
 
@@ -89,7 +89,7 @@
 
         <tr>
             
-                <td class="name"><code>dat</code></td>
+                <td class="name"><code>url</code></td>
             
 
             <td class="type">
@@ -105,7 +105,7 @@
 
             
 
-            <td class="description last">Link to a webpage containing the dataset</td>
+            <td class="description last">Link to a webpage containing the dataset (The dataset itself should be in a json file with a structure as so: {'name': {string}, 'children':[{'name':{string}, 'children':[{'name':{string}, 'size':{int/float}}, {'name':{string}, 'size':{int/float}, ...}] }]})</td>
         </tr>
 
     
@@ -118,7 +118,7 @@
             <td class="type">
             
                 
-<span class="param-type">int</span>
+<span class="param-type">integer</span>
 
 
             
@@ -141,7 +141,7 @@
             <td class="type">
             
                 
-<span class="param-type">int</span>
+<span class="param-type">integer</span>
 
 
             
@@ -175,6 +175,98 @@
             
 
             <td class="description last">Colour scheme for the visualization [Format of input is in HSL - Hue (0-360), Saturation (0%-100%) and Lightness (0%-100%) in an array] An example of this would be ['hsl(-,-%,-%)', 'hsl(-,-%,-%)'])</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>this.svg</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Selects the svg container for which the visualization is displayed on</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>this.g</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">All circles and text append to the svg container</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>this.color</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Sets the colour for the circles</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>this.pack</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Creates a circle packing layout</td>
         </tr>
 
     
@@ -215,7 +307,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="zoom_circle.js.html">zoom_circle.js</a>, <a href="zoom_circle.js.html#line19">line 19</a>
+        <a href="zoom_circle.js.html">zoom_circle.js</a>, <a href="zoom_circle.js.html#line24">line 24</a>
     </li></ul></dd>
     
 
@@ -261,72 +353,6 @@
     
 
     
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id="Updatedata"><span class="type-signature"></span>Updatedata<span class="type-signature"></span></h4>
-
-
-
-
-<div class="description">
-    Setter used to input new datasets into the same formatted visualization (*Optional function) This can be called using "[variable name].Updatedata = [url to dataset]"
-</div>
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="zoom_circle.js.html">zoom_circle.js</a>, <a href="zoom_circle.js.html#line65">line 65</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-    
 
     
         <h3 class="subsection-title">Methods</h3>
@@ -345,7 +371,7 @@
 
 
 <div class="description">
-    Takes the split data from the dataset and creates zoomable circles or 'bubbles' based on each data. Based on the structure of the json file, each 'name' will create a node while for each 'children' declared, a subnode is created which is shown as a smaller circle embedded in the bigger circle. The function also sets up the background colour of the svg
+    Takes the split data from the dataset and creates zoomable circles or 'bubbles' based on each data. Based on the structure of the json file, each 'name' will create a node while for each 'children' declared, a subnode is created which is shown as a smaller circle embedded in the bigger circle.<br>The function also sets up the background colour of the svg.
 </div>
 
 
@@ -354,6 +380,101 @@
 
 
 
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>this.circle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Creates the circle(s)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>this.text</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Creates the text(s) on the circle(s)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>this.node</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Selects all the circles and texts</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -389,7 +510,144 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="zoom_circle.js.html">zoom_circle.js</a>, <a href="zoom_circle.js.html#line73">line 73</a>
+        <a href="zoom_circle.js.html">zoom_circle.js</a>, <a href="zoom_circle.js.html#line87">line 87</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="Updatedata"><span class="type-signature"></span>Updatedata<span class="signature">(data)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Setter used to input new datasets into the same formatted visualization (*Optional function)<br>This can be called using "[variable name].Updatedata = [url to dataset]".
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">url</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Link to new dataset</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="zoom_circle.js.html">zoom_circle.js</a>, <a href="zoom_circle.js.html#line75">line 75</a>
     </li></ul></dd>
     
 
@@ -433,7 +691,7 @@
 
 
 <div class="description">
-    Zooms into the circle
+    Zooms into the circle with a set duration. During the transition, the text display on outer node will disappear while the text on the inner node will display.
 </div>
 
 
@@ -489,6 +747,29 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>this.transition</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Zooming into circles</td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -526,7 +807,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="zoom_circle.js.html">zoom_circle.js</a>, <a href="zoom_circle.js.html#line108">line 108</a>
+        <a href="zoom_circle.js.html">zoom_circle.js</a>, <a href="zoom_circle.js.html#line124">line 124</a>
     </li></ul></dd>
     
 
@@ -570,7 +851,7 @@
 
 
 <div class="description">
-    Pans the "camera" view to the location of the circle which is to be zoomed in on
+    Pans the "camera" view to the location of the circle which is to be zoomed in on.
 </div>
 
 
@@ -663,7 +944,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="zoom_circle.js.html">zoom_circle.js</a>, <a href="zoom_circle.js.html#line131">line 131</a>
+        <a href="zoom_circle.js.html">zoom_circle.js</a>, <a href="zoom_circle.js.html#line148">line 148</a>
     </li></ul></dd>
     
 
@@ -715,7 +996,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Wed Jan 15 2020 22:56:39 GMT+0000 (Greenwich Mean Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Thu Jan 16 2020 01:59:02 GMT+0000 (Greenwich Mean Time)
 </footer>
 
 <script> prettyPrint(); </script>

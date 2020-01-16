@@ -37,16 +37,22 @@
  */
 class ZoomableCircle /** @lends ZoomableCircle.prototype */ {
     /**
-     * Sets inputs for the styling and formatting of the visualization. It also parses data from the given input
+     * Sets inputs for the styling and formatting of the visualization.&lt;br>It also parses data from the given input.
      * @constructor
-     * @param  {url} dat - Link to a webpage containing the dataset
-     * @param  {int} mar - Size of space between the visualization and the svg container
-     * @param  {int} diam - Diameter of a bubble
+    * @param  {url} url - Link to a webpage containing the dataset (The dataset itself should be in a json file with a structure as so: {'name': {string}, 'children':[{'name':{string}, 'children':[{'name':{string}, 'size':{int/float}}, {
+    * 'name':{string}, 'size':{int/float}, ...}] }]})
+     * @param  {integer} mar - Size of space between the visualization and the svg container
+     * @param  {integer} diam - Diameter of a bubble
      * @param  {array} cR - Colour scheme for the visualization [Format of input is in HSL - Hue (0-360), Saturation (0%-100%) and Lightness (0%-100%) in an array] An example of this would be ['hsl(-,-%,-%)', 'hsl(-,-%,-%)'])
+     * @param  {function} this.svg - Selects the svg container for which the visualization is displayed on
+     * @param  {object} this.g - All circles and text append to the svg container
+     * @param  {object} this.color - Sets the colour for the circles
+     * @param  {object} this.pack - Creates a circle packing layout
      */
     constructor(url, mar, diam, cR) {
         this.data = url;
         this.margin = mar;
+        // Error handling for margin
         if (mar) {
             this.margin = mar;
         } else {
@@ -54,6 +60,7 @@ class ZoomableCircle /** @lends ZoomableCircle.prototype */ {
         };
         this.svg = d3.select('svg');
         this.diameter = diam;
+        // Error handling for diameter
         if (diam) {
             this.diameter = diam;
         } else {
@@ -61,6 +68,7 @@ class ZoomableCircle /** @lends ZoomableCircle.prototype */ {
         };
         this.g = this.svg.append('g').attr('transform', 'translate(' + this.diameter / 2 + ',' + this.diameter / 2 + ')');
         this.colourRange = cR;
+        // Error handling for colour range
         if (cR) {
             this.colourRange = cR;
         } else {
@@ -76,6 +84,7 @@ class ZoomableCircle /** @lends ZoomableCircle.prototype */ {
             .padding(2);
 
         const x = this;
+        // this function parses data
         d3.json(this.data, (error, root) => {
             if (error) throw error;
             x.root = d3.hierarchy(root)
@@ -86,18 +95,23 @@ class ZoomableCircle /** @lends ZoomableCircle.prototype */ {
         });
     }
 
-    /**
-     * Setter used to input new datasets into the same formatted visualization (*Optional function) This can be called using "[variable name].Updatedata = [url to dataset]"
-     * @param {url} data - Link to new dataset
-     */
+/**
+ * Setter used to input new datasets into the same formatted visualization (*Optional function)&lt;br>This can be called using "[variable name].Updatedata = [url to dataset]".
+ * @function
+ * @param {url} data - Link to new dataset
+ */
     set Updatedata (data) {
         this.data = data;
         const DataVis = new ZoomableCircle(this.data);
     }
 
-    /**
-     * Takes the split data from the dataset and creates zoomable circles or 'bubbles' based on each data. Based on the structure of the json file, each 'name' will create a node while for each 'children' declared, a subnode is created which is shown as a smaller circle embedded in the bigger circle. The function also sets up the background colour of the svg
-     */
+/**
+ * Takes the split data from the dataset and creates zoomable circles or 'bubbles' based on each data. Based on the structure of the json file, each 'name' will create a node while for each 'children' declared, a subnode is created which is shown as a smaller circle embedded in the bigger circle.&lt;br>The function also sets up the background colour of the svg.
+ * @function
+ * @param {object} this.circle - Creates the circle(s)
+ * @param {object} this.text - Creates the text(s) on the circle(s)
+ * @param {object} this.node - Selects all the circles and texts
+ */
     draw() {
         const x = this;
 
@@ -130,8 +144,10 @@ class ZoomableCircle /** @lends ZoomableCircle.prototype */ {
     }
 
     /**
-     * Zooms into the circle
+     * Zooms into the circle with a set duration. During the transition, the text display on outer node will disappear while the text on the inner node will display.
+     * @function
      * @param  {any} d - Data currently binded to the current element
+     * @param  {function} this.transition - Zooming into circles
      */
     zoom(d) {
         // eslint-disable-next-line no-unused-vars
@@ -153,9 +169,10 @@ class ZoomableCircle /** @lends ZoomableCircle.prototype */ {
     }
 
     /**
-     * Pans the "camera" view to the location of the circle which is to be zoomed in on
-     * @param  {function} v - Interpolator between the two views (each taking the coordinates of the centre of the viewport and the width of the viewport) on a 2D plane 
-     */
+     * Pans the "camera" view to the location of the circle which is to be zoomed in on.
+     * @function
+     * @param  {function} v - Interpolator between the two views (each taking the coordinates of the centre of the viewport and the width of the viewport) on a 2D plane
+     * */
     zoomTo(v) {
         const k = this.diameter / v[2];
         this.view = v;
@@ -179,7 +196,7 @@ class ZoomableCircle /** @lends ZoomableCircle.prototype */ {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Wed Jan 15 2020 22:56:39 GMT+0000 (Greenwich Mean Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Thu Jan 16 2020 01:59:02 GMT+0000 (Greenwich Mean Time)
 </footer>
 
 <script> prettyPrint(); </script>
